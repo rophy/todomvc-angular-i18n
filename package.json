@@ -1,0 +1,9 @@
+{
+  "name": "gp-angular-example",
+  "version": "0.1.1",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.10.0",
+    "serve-favicon": "^2.4.2"
+  }
+}
