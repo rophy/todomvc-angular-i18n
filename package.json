@@ -4,6 +4,7 @@
   "main": "app.js",
   "dependencies": {
     "express": "^4.10.0",
+    "express-request-language": "^1.1.10",
     "serve-favicon": "^2.4.2"
   }
 }

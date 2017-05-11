@@ -6,7 +6,7 @@
  * - exposes the model to the template and provides event handlers
  */
 angular.module('todomvc')
-	.controller('TodoCtrl', function TodoCtrl($scope, $routeParams, $filter, store) {
+	.controller('TodoCtrl', function TodoCtrl($scope, $routeParams, $filter, store, GlobalizationPipelineService) {
 		'use strict';
 
 		var todos = $scope.todos = store.todos;
@@ -122,4 +122,11 @@ angular.module('todomvc')
 				}
 			});
 		};
+		
+		GlobalizationPipelineService.translate('items_left').then(function(string) {
+			$scope.items_left = string;
+		});
+		GlobalizationPipelineService.translate('new_item_tooltip').then(function(string) {
+			$scope.new_item_tooltip = string;
+		});
 	});
