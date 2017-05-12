@@ -2,6 +2,9 @@
   "name": "gp-angular-example",
   "version": "0.1.1",
   "main": "app.js",
+  "scripts": {
+    "postinstall": "cd www && npm install"
+  },
   "dependencies": {
     "express": "^4.10.0",
     "express-request-language": "^1.1.10",

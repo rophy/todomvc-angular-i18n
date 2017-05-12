@@ -1,5 +1,5 @@
 var server = require('./server');
 
-server.listen(8080, function(err) {
-  console.log(err, 'listening to port 8080');
+var listener = server.listen(process.env.PORT || 8080, function(err) {
+  console.log(err, 'listening to port ' + listener.address().port);
 });
