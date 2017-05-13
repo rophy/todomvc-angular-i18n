@@ -13,5 +13,15 @@ app.use(requestLanguage({
 app.get('/language', function(req, res, next) {
 	res.send(req.language);
 });
+
+app.get('/credentials', function(req, res, next) {
+	res.send({
+		url: process.env.GP_URL,
+		userId: process.env.GP_USERID,
+		password: process.env.GP_PASSWORD,
+		instanceId: process.env.GP_INSTANCEID
+	});  
+});
+
 app.use(express.static(__dirname+'/www'));
 app.use(favicon(__dirname + '/site-assets/favicon.ico'));

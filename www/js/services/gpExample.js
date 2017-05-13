@@ -8,10 +8,22 @@
  * model.
  */
 angular.module('todomvc')
-	.factory('getLanguage', function ($http) {
-		'use strict';
-		return $http.get('/language')
+.factory('gpExample', function ($http) {
+	'use strict';
+
+	var gpExample = {
+		getCredentials: function() {
+			return $http.get('/credentials')
+			.then(function(res) {
+				return res.data;
+			});
+		},
+		getLanguage: function() {
+			return $http.get('/language')
 			.then(function (res) {
 				return res.data;
 			});
-	});
+		}
+	};
+	return gpExample;
+});
