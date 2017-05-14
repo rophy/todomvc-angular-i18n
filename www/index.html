@@ -6,6 +6,11 @@
 		<link rel="stylesheet" href="node_modules/todomvc-common/base.css">
 		<link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
 		<style>[ng-cloak] { display: none; }</style>
+		<style>
+			#language {
+				float: right;
+			}
+		</style>
 	</head>
 	<body ng-app="todomvc">
 		<ng-view></ng-view>
@@ -52,6 +57,7 @@
 			</section>
 			<footer id="info">
 				<p translate>edit_help</p>
+				<select id="language" ng-model="language" ng-options="lang as lang for lang in languages"></select>
 				<p>Credits:
 					<a href="http://twitter.com/cburgdorf">Christoph Burgdorf</a>,
 					<a href="http://ericbidelman.com">Eric Bidelman</a>,

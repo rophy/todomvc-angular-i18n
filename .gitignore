@@ -1,1 +1,3 @@
 /node_modules
+/www/bundles.json
+/www/npm-debug.log
