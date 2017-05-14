@@ -1,4 +1,4 @@
-# gp-angular-example
+# todomvc-angular-i18n using gp-angular-client
 
 A modified version of [AngularJS TodoMVC](https://github.com/tastejs/todomvc/tree/gh-pages/examples/angularjs) to demonstrate the usage of [gp-angular-client](https://github.com/IBM-Bluemix/gp-angular-client), which is a SDK for [Globalization Pipeline](https://console.ng.bluemix.net/catalog/services/globalization-pipeline/).
 
