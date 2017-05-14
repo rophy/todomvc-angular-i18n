@@ -8,18 +8,11 @@
 angular.module('todomvc', ['ngRoute', 'ngResource', 'pascalprecht.translate'])
 	.config(function ($translateProvider) {
 		$translateProvider
-		.translations('en-US', {
-		  "title":"todos",
-		  "new_item_tooltip": "What needs to be done?",
-		  "clear_completed": "Clear completed",
-		  "edit_help": "Double-click to edit a todo",
-		  "mark_complete": "Mark all as complete",
-		  "active": "Active",
-		  "all": "All",
-		  "completed": "Completed",
-		  "items_left": "{{remainingCount}} item(s) left"
+		.useStaticFilesLoader({
+			prefix: 'bundles/',
+			suffix: '.json'
 		})
-		.preferredLanguage('en-US');
+		.preferredLanguage('en');
 	})
 	.config(function ($routeProvider) {
 		'use strict';
