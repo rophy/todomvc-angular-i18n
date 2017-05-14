@@ -1,0 +1,4 @@
+applications:
+- name: todomvc-angular-i18n
+  command: node app.js
+  memory:    128M
