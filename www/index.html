@@ -38,13 +38,13 @@
 					<span id="todo-count" translate translate-values="{remainingCount:remainingCount}">items_left</span>
 					<ul id="filters">
 						<li>
-							<a ng-class="{selected: status == ''} " href="#/" translate>all</a>
+							<a ng-class="{selected: status == ''} " href="#!/" translate>all</a>
 						</li>
 						<li>
-							<a ng-class="{selected: status == 'active'}" href="#/active" translate>active</a>
+							<a ng-class="{selected: status == 'active'}" href="#!/active" translate>active</a>
 						</li>
 						<li>
-							<a ng-class="{selected: status == 'completed'}" href="#/completed" translate>completed</a>
+							<a ng-class="{selected: status == 'completed'}" href="#!/completed" translate>completed</a>
 						</li>
 					</ul>
 					<button id="clear-completed" ng-click="clearCompletedTodos()" ng-show="completedCount" translate>clear_completed</button>
