@@ -5,7 +5,22 @@
  *
  * @type {angular.Module}
  */
-angular.module('todomvc', ['ngRoute', 'ngResource'])
+angular.module('todomvc', ['ngRoute', 'ngResource', 'pascalprecht.translate'])
+	.config(function ($translateProvider) {
+		$translateProvider
+		.translations('en-US', {
+		  "title":"todos",
+		  "new_item_tooltip": "What needs to be done?",
+		  "clear_completed": "Clear completed",
+		  "edit_help": "Double-click to edit a todo",
+		  "mark_complete": "Mark all as complete",
+		  "active": "Active",
+		  "all": "All",
+		  "completed": "Completed",
+		  "items_left": "{{remainingCount}} item(s) left"
+		})
+		.preferredLanguage('en-US');
+	})
 	.config(function ($routeProvider) {
 		'use strict';
 
