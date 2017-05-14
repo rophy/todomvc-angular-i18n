@@ -9,7 +9,7 @@ angular.module('todomvc', ['ngRoute', 'ngResource', 'pascalprecht.translate'])
 	.config(function ($translateProvider) {
 		$translateProvider
 		.useStaticFilesLoader({
-			prefix: 'bundles/',
+			prefix: 'bundles/msg_',
 			suffix: '.json'
 		})
 		.preferredLanguage('en');

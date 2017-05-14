@@ -6,8 +6,8 @@ var path = require('path');
 var files = fs.readdirSync('./www/bundles');
 var langs = [];
 files.forEach(function(file) {
-	if (path.extname(file) == '.json') {
-		langs.push(path.basename(file, '.json'));
+	if (file.indexOf('msg_')===0 && path.extname(file) == '.json') {
+		langs.push(path.basename(file, '.json').replace('msg_',''));
 	}
 });
 
