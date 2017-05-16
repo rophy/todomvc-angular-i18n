@@ -9,11 +9,11 @@ A modified version of [AngularJS TodoMVC](https://github.com/tastejs/todomvc/tre
 3. In Globalization Pipeline GUI, create a **Reader** API user.
     - Note: Do NOT use the service credential, you must create a reader user.
 4. Set following environment variables:
-  - `GP_URL`: value from the reader user credential
-  - `GP_USERID`: value from the reader user credential
-  - `GP_PASSWORD: : value from the reader user credential
-  - `GP_INSTANCEID`: value from the reader user credential
-  - `GP_BUNDLEID`: name of your created bundle
+    - `GP_URL`: value from the reader user credential
+    - `GP_USERID`: value from the reader user credential
+    - `GP_PASSWORD`: value from the reader user credential
+    - `GP_INSTANCEID`: value from the reader user credential
+    - `GP_BUNDLEID`: name of your created bundle
 5. Download and run this repo after the environment variables are set:
 
   ```shell
