@@ -11,7 +11,6 @@ angular.module('todomvc')
 
 		var todos = $scope.todos = store.todos;
 		
-		console.log('lala');
 		$scope.newTodo = '';
 		$scope.editedTodo = null;
 
