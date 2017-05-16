@@ -10,7 +10,7 @@ var gpClient = require('g11n-pipeline').getClient({
 	}
 });
 
-var bundle = gpClient.bundle('gp-angular-example');
+var bundle = gpClient.bundle(process.env.GP_BUNDLEID);
 
 var app = module.exports = express();
 var favicon = require('serve-favicon');
