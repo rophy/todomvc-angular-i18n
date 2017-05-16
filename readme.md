@@ -5,10 +5,15 @@ A modified version of [AngularJS TodoMVC](https://github.com/tastejs/todomvc/tre
 ## Getting Started
 
 1. Create an instance of [Globalization Pipeline](https://console.ng.bluemix.net/catalog/services/globalization-pipeline/) in Bluemix.
-2. In Globalization Pipeline GUI, create a new bundle called `gp-angular-example`, and upload `bundles/en_US/msg.properties`.
+2. In Globalization Pipeline GUI, create a new bundle, and upload `bundles/en_US/msg.properties`.
 3. In Globalization Pipeline GUI, create a **Reader** API user.
     - Note: Do NOT use the service credential, you must create a reader user.
-4. Set environment variables `GP_URL`, `GP_USERID`, `GP_PASSWORD`, `GP_INSTANCEID` with values from the reader user credential.
+4. Set following environment variables:
+  - `GP_URL`: value from the reader user credential
+  - `GP_USERID`: value from the reader user credential
+  - `GP_PASSWORD: : value from the reader user credential
+  - `GP_INSTANCEID`: value from the reader user credential
+  - `GP_BUNDLEID`: name of your created bundle
 5. Download and run this repo after the environment variables are set:
 
   ```shell

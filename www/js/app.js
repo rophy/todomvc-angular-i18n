@@ -19,7 +19,7 @@ angular.module('todomvc', ['ngRoute', 'ngResource', 'gp'])
 						return gpExample.getCredentials().then(function(cred) {
 							credentials = cred;
 							GlobalizationPipelineServiceProvider.setGpConfig({
-								bundleId: 'gp-angular-example',
+								bundleId: cred.bundleId,
 								credentials: credentials
 							});
 							return true;

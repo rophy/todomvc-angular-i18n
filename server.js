@@ -32,7 +32,8 @@ app.get('/credentials', function(req, res, next) {
 		url: process.env.GP_URL,
 		userId: process.env.GP_USERID,
 		password: process.env.GP_PASSWORD,
-		instanceId: process.env.GP_INSTANCEID
+		instanceId: process.env.GP_INSTANCEID,
+		bundleId: process.env.GP_BUNDLEID
 	});  
 });
 
