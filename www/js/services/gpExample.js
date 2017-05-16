@@ -8,9 +8,12 @@
  * model.
  */
 angular.module('todomvc')
-.factory('gpExample', function ($http) {
+.factory('gpExample', function ($http, $q) {
 	'use strict';
-
+	
+	
+	var langs = null;
+	var deferred = $q.defer();
 	var gpExample = {
 		getCredentials: function() {
 			return $http.get('/credentials')
@@ -19,10 +22,14 @@ angular.module('todomvc')
 			});
 		},
 		getTranslations: function() {
-			return $http.get('/translations')
-			.then(function (res) {
-				return res.data;
-			});
+			if (!langs) {
+				$http.get('/translations')
+				.then(function (res) {
+					langs = res.data;
+					deferred.resolve(langs);
+				});
+			}
+			return deferred.promise;
 		}
 	};
 	return gpExample;
