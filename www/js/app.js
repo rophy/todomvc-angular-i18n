@@ -14,25 +14,17 @@ angular.module('todomvc', ['ngRoute', 'ngResource', 'gp'])
 			controller: 'TodoCtrl',
 			templateUrl: 'todomvc-index.html',
 			resolve: {
-				language: function(gpExample, GlobalizationPipelineService) {
-
-					function getLanguage() {
-						return gpExample.getLanguage().then(function(lang) {
-							GlobalizationPipelineService.setTargetLang(lang);
-							return lang;
-						});
-					}
-
+				gpReady: function(gpExample) {
 					if (!credentials) {
-						gpExample.getCredentials().then(function(cred) {
+						return gpExample.getCredentials().then(function(cred) {
 							credentials = cred;
 							GlobalizationPipelineServiceProvider.setGpConfig({
 								bundleId: 'gp-angular-example',
 								credentials: credentials
 							});
-							return getLanguage();
+							return true;
 						});
-					} else return getLanguage();
+					} else return true;
 				},
 				
 				store: function (todoStorage) {

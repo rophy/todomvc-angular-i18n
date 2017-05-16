@@ -18,8 +18,8 @@ angular.module('todomvc')
 				return res.data;
 			});
 		},
-		getLanguage: function() {
-			return $http.get('/language')
+		getTranslations: function() {
+			return $http.get('/translations')
 			.then(function (res) {
 				return res.data;
 			});

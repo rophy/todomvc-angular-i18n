@@ -6,11 +6,12 @@
  * - exposes the model to the template and provides event handlers
  */
 angular.module('todomvc')
-	.controller('TodoCtrl', function TodoCtrl($scope, $routeParams, $filter, store, GlobalizationPipelineService) {
+	.controller('TodoCtrl', function TodoCtrl($scope, $routeParams, $filter, $location, store, GlobalizationPipelineService, gpReady, gpExample) {
 		'use strict';
 
 		var todos = $scope.todos = store.todos;
-
+		
+		console.log('lala');
 		$scope.newTodo = '';
 		$scope.editedTodo = null;
 
@@ -123,10 +124,30 @@ angular.module('todomvc')
 			});
 		};
 		
+		var query = $location.search();
+		if (query.lang) {
+			$scope.language = query.lang;
+		} else {
+			$scope.language = 'en';
+		}
+		GlobalizationPipelineService.setTargetLang($scope.language);
 		GlobalizationPipelineService.translate('items_left').then(function(string) {
 			$scope.items_left = string;
 		});
 		GlobalizationPipelineService.translate('new_item_tooltip').then(function(string) {
 			$scope.new_item_tooltip = string;
 		});
+		
+		$scope.$watch('language', function (newLanguage, oldLanguage) {
+			if (oldLanguage != newLanguage) {
+				$location.search('lang', newLanguage);
+			}
+		});
+		
+		$scope.languages = ['en'];
+		gpExample.getTranslations().then(function(langs) {
+			$scope.languages = langs;
+			
+		});
+
 	});
