@@ -23,8 +23,8 @@ A modified version of [AngularJS TodoMVC](https://github.com/tastejs/todomvc/tre
   npm install
   node app.js
   ```
-6. Load http://localhost:8080 with browser language set to en_US.
-7. You should see TodoMVC example in English.
-8. In Globalization Pipeline GUI, translate `gp-angular-example` into zh_CN.
-9. Load http://localhost:8080 with browser language set to zh_CN.
-10. You should see TodoMVC example in Simplified Chinese.
+6. Load http://localhost:8080, you should see TodoMVC example in English.
+8. In Globalization Pipeline GUI, translate your bundle into zh-CN.
+9. Reload TodoMVC app.
+10. Notice that zh-CN is now avaiable to select at the bottom right drop down.
+11. Select zh-CN, you should see TodoMVC example in Simplified Chinese.
