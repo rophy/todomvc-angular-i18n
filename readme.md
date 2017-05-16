@@ -12,8 +12,9 @@ A modified version of [AngularJS TodoMVC](https://github.com/tastejs/todomvc/tre
 5. Download and run this repo after the environment variables are set:
 
   ```shell
-  git clone https://github.com/rophy/gp-angular-example.git
-  cd gp-angular-example
+  git clone https://github.com/rophy/todomvc-angular-i18n.git
+  cd todomvc-angular-i18n
+  git checkout gp-angular-client
   npm install
   node app.js
   ```
